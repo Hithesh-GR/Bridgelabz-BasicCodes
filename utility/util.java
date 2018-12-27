@@ -1,6 +1,7 @@
 package com.bridgelabz.utility;
 import java.util.Scanner;
 import java.util.Random;
+
 public class util 
 {
 	static Scanner sc=new Scanner(System.in);
