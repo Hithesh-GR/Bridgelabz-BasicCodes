@@ -9,12 +9,12 @@ public class Gambler
         int stake  = util.getInt();    
         System.out.println("enter the goal value");
         int goal   = util.getInt();    
-        System.out.println("enter trials");
-        int trials = util.getInt();    
+        System.out.println("enter no. of times");
+        int noftimes = util.getInt();    
         int bets = 0;        
         int wins = 0;        
 
-        for (int t = 0; t < trials; t++) 
+        for (int t = 0; t < noftimes; t++) 
         {
 
             int cash = stake;
@@ -30,9 +30,9 @@ public class Gambler
             	wins++;
         }
 
-        System.out.println(wins + " wins of " + trials);
-        System.out.println("Percent of games won = " + 100.0 * wins / trials);
-        System.out.println("Avg # bets percentage = " + 1.0 * bets / trials);
+        System.out.println(wins + " wins of " + noftimes);
+        System.out.println("Percent of games won = " + 100.0 * wins / noftimes);
+        System.out.println("Avg # bets percentage = " + 1.0 * bets / noftimes);
     }
 
 }
