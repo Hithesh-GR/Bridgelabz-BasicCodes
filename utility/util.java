@@ -43,6 +43,7 @@ public class util
 				while(number%i==0)
 				{
 					System.out.println(i);
+
 					number=number/i;
 				}
 			}
@@ -60,6 +61,11 @@ public class util
 		double root2=(-b-(Math.sqrt(delta))/(4*a));
 		System.out.println("1st root of the equation is "+root1);
 		System.out.println("2nd root of the equation is "+root2);
+	}
+	public static double wind(double t,double v)
+	{
+		double w=35.74 + 0.6215*t + (0.4275*t - 35.75) * Math.pow(v, 0.16);
+		return w;
 	}
 	
 }
