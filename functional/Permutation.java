@@ -1,4 +1,5 @@
 package com.bridgelabz.functional;
+import com.bridgelabz.utility.*;
 public class Permutation 
 {
 		private static void swap(char[] ch, int i, int j)
@@ -9,7 +10,7 @@ public class Permutation
 		}
 		private static void permutations(char[] ch, int currentIndex)
 		{
-			if (currentIndex == ch.length - 1) 
+			if (currentIndex == ch.length) 
 			{
 				System.out.println(String.valueOf(ch));
 			}
@@ -21,7 +22,9 @@ public class Permutation
 		}
 		public static void main(String[] args)
 		{
-			String s = "abc";
+			System.out.println("enter the string value");
+			String s=util.getString();
+			System.out.println("the differnt variants of string are:");
 			permutations(s.toCharArray(), 0);
 		}
 }
