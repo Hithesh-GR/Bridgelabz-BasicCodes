@@ -22,9 +22,9 @@ public class Permutation
 		}
 		public static void main(String[] args)
 		{
-			System.out.println("enter the string value");
+			System.out.println("enter the value");
 			String s=util.getString();
-			System.out.println("the differnt variants of string are:");
+			System.out.println("the differnt variants are:");
 			permutations(s.toCharArray(), 0);
 		}
 }

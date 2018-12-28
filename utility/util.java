@@ -1,7 +1,6 @@
 package com.bridgelabz.utility;
 import java.util.Scanner;
 import java.util.Random;
-
 public class util 
 {
 	static Scanner sc=new Scanner(System.in);
@@ -66,6 +65,11 @@ public class util
 	{
 		double w=35.74 + 0.6215*t + (0.4275*t - 35.75) * Math.pow(v, 0.16);
 		return w;
+	}
+	public static char[] convertionOfStringToCharacterArray(String s1) 
+	{
+		char[] c1 = s1.toCharArray();
+		return c1;
 	}
 	
 }
