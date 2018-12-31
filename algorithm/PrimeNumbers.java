@@ -24,9 +24,9 @@ class PrimeNumbers
 	  {
 	     //Appended the Prime number to the String
 		  
-	     primeNumbers = primeNumbers + i +" \n ";
+	     primeNumbers = primeNumbers + i + " \n ";
 	  }	
-}	
+       }	
        
        System.out.println("Prime numbers from 1 to 1000 are:");
        System.out.println(primeNumbers);

@@ -71,5 +71,5 @@ public class util
 		char[] c1 = s1.toCharArray();
 		return c1;
 	}
-	
+		
 }
