@@ -8,7 +8,7 @@ public class CouponNumbers
 	{
 		System.out.println("enter the distinct coupon number");
 		int n=util.getInt();
-		ArrayList<Integer> a1=new ArrayList();
+		ArrayList<Integer> a = new ArrayList<Integer>();
 		int count=0;
 		for(int i=1;i<=n;i++)
 		{
@@ -16,15 +16,15 @@ public class CouponNumbers
 			count++;
 			int coupon=random.nextInt(n);
 			System.out.println("coupon no " +coupon);
-			if(!a1.contains(coupon))
+			if(!a.contains(coupon))
 			{
-				a1.add(coupon);
+				a.add(coupon);
 			}
 			else
 				i--;
 			}
 		System.out.println("enter distinct random numbers");
-		for(Integer k:a1)
+		for(Integer k:a)
 			System.out.println(k);
 		System.out.println("total of all distinct num is "+count);
 		}

@@ -25,6 +25,5 @@ public class Flipcoin
 		System.out.println("Heads "+heads);
 		System.out.println("Tails "+tails);
 	}
-	
-}
+}	
 	

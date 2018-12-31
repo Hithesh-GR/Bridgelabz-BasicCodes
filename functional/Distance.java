@@ -18,4 +18,4 @@ public class Distance
 	        
 	        System.out.println("distance from (" + x + ", " + y + ") to (0, 0) = " + distance);
 	    }   
-	}
+}
