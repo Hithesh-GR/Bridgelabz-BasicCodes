@@ -2,26 +2,19 @@ package com.bridgelabz.algorithm;
 import com.bridgelabz.utility.*;
 public class TempConver 
 {
-				public static void main(String[] args) 
-				{
-				try 
-				{
-					System.out.println("enter temp in c or f");
-					int tem = util.getInt();
-					char t = util.getString().charAt(0);
-					if (t != 'f' && t != 'F' && t != 'c' && t != 'C') 
-					{
-						System.out.println("enter correct input");
-						main(args);
-						return;
-					}
-					tem = util.TemperatureConversion(tem, t);
-					System.out.println("coverted temp is " + tem);
-				} 
-				catch (Exception e) 
-				{
-					System.out.println("temperature in format 4545 c");
-				}
+	public static void main(String[] args) 
+	{
+		System.out.println("Enter temperature in Fahrenheit :"); 
+		float temperatue = util.getFloat(); 
+		float celsius = util.toCelsius(temperatue); 
+		System.out.printf("%.02f degree fahrenheit temperature is equal to \n %.02f "
+							+ " degree celsius \n", temperatue, celsius);
+		System.out.println("Enter temperature in degree celsius :"); 
+		temperatue = util.getFloat(); 
+		float fahrenheit = util.toFahrenheit(temperatue); 
+		System.out.printf("%.02f degree celsius is equal to \n %.02f "
+							+ " degree fahrenheit \n", temperatue, fahrenheit);
+	}
+				
+}
 
-			}
-		}

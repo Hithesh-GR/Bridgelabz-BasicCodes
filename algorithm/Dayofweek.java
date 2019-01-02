@@ -10,5 +10,14 @@ public class Dayofweek
 					m = util.getInt();
 					y = util.getInt();
 					System.out.println("day is "+util.dayOfWeek(d, m, y));
+					int dd= util.getInt();
+					  if(dd % 12 ==0)
+					  {
+				    	  System.out.println("This is a leap year");
+				      }
 				}
+				
+				
+				
+				
 }

@@ -14,6 +14,11 @@ public class util
 		double doubleValue=sc.nextDouble();
 		return doubleValue;
 	}
+	public static float getFloat()
+	{
+		float floatValue=sc.nextFloat();
+		return floatValue;
+	}
 	public static int getInt()
 	{
 		int intValue=sc.nextInt();
@@ -71,24 +76,17 @@ public class util
 		char[] c1 = s1.toCharArray();
 		return c1;
 	}
-	public static int TemperatureConversion(int tem, char t) 
+	public static float toFahrenheit(float celsius) 
 	{
-		int conver;
-		if (t == 'c' || t == 'C') 
-		{
-			conver = (tem * 9 / 5) + 32;
-		} 
-		else if (t == 'f' || t == 'F') 
-		{
-			conver = (tem - 32) * 5 / 9;
-		} 
-		else 
-		{
-			System.out.println("Enter correct input");
-			return 0;
+		float fahrenheit = 9 * (celsius / 5) + 32; 
+		return fahrenheit;
 		}
-		return conver;
-	}
+	
+	public static float toCelsius(float fahrenheit) 
+	{
+		float celsius = (fahrenheit - 32) * 5 / 9; 
+		return celsius; 
+		} 
 	public static int dayOfWeek(int d, int m, int y) 
 	{
 		int y0 = y - (14 - m) / 12;
@@ -96,5 +94,12 @@ public class util
 		int m0 = m + 12 * ((14 - m) / 12) - 2;
 		int d0 = (d + x + (31 * m0) / 12) % 7;
 		return d0;
+	}
+	public static double monthlyPayment(double p, double y, double r) 
+	{
+		double n = 12 * y;
+		double r0 = r / (12 * 100);
+		double payment = p * r0 / (1 - Math.pow((1 + r0), -n));
+		return payment;
 	}
 }
