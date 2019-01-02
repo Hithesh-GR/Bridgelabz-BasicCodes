@@ -11,13 +11,13 @@ public class Vendingmachine
 			 * Static array to store values of notes
 			 */
 			static int[] NOTES = { 1000, 500, 100, 50, 10, 5, 2, 1 };
-			/**
+			/*
 			 * Function to find the notes and print the output
 			 * 
 			 * @param value the amount to which the note to despenced
 			 */
 			static void notes(int value) 
-			{
+						{
 				if (value / NOTES[I] != 0) 
 				{
 					TOTAL += (value / NOTES[I]);
