@@ -1,6 +1,7 @@
 package com.bridgelabz.utility;
 import java.util.Scanner;
 import java.util.Random;
+
 public class util 
 {
 	static Scanner sc=new Scanner(System.in);
@@ -80,7 +81,7 @@ public class util
 	{
 		float fahrenheit = 9 * (celsius / 5) + 32; 
 		return fahrenheit;
-		}
+	}
 	
 	public static float toCelsius(float fahrenheit) 
 	{
@@ -101,5 +102,16 @@ public class util
 		double r0 = r / (12 * 100);
 		double payment = p * r0 / (1 - Math.pow((1 + r0), -n));
 		return payment;
+	}
+	public static double sqrut(double c) 
+	{
+
+		double t = c;
+		double epsilon = 1e-15;
+		while (Math.abs(t - c / t) > epsilon * t) 
+		{
+			t = (c / t + t) / 2;
+		}
+		return t;
 	}
 }
