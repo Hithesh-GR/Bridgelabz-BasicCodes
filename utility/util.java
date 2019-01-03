@@ -1,7 +1,9 @@
 package com.bridgelabz.utility;
 import java.util.Scanner;
+import java.util.Arrays;
 import java.util.Random;
-
+import java.io.File;
+import java.io.FileNotFoundException;
 public class util 
 {
 	static Scanner sc=new Scanner(System.in);
@@ -152,5 +154,39 @@ public class util
         	 System.out.println("decimal and binary numbers are not equal");
          }
      }
+	 public static void binarySearchStringFile() throws FileNotFoundException
+	 {
+	 	File file = new File("/home/bridgelabz/Documents/hithu");
+	 	Scanner sc=new Scanner(file);
+	 	String name = sc.nextLine();
+	 	String[] array = name.split(" ");
+	 	Arrays.sort(array);
+	 	for(String k:array)
+	 	{
+	 		System.out.println(k);
+	 		
+	 	}
+	 	System.out.println("enter search element");
+	 	String search = util.getString();
+	 	int firstIndex = 0;
+	 	int lastIndex = array.length-1;
+	 	while(firstIndex<=lastIndex)
+	 	{
+	 		int middle = (firstIndex+lastIndex)/2;
+			if(search.compareTo(array[middle])==0)
+			{
+				System.out.println("the element fount at "+(middle));
+				break;
+			}
+			else if (search.compareTo(array[middle])>0) 
+			{
+				firstIndex = middle+1;
+			}
+			else
+			{
+				lastIndex = middle-1;
+			}	
+	 	}
+	 }
 }
 
